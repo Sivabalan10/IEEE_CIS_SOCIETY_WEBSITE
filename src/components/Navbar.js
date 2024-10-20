@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import { Modal } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/logo.jpg";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
@@ -27,7 +28,17 @@ function NavBar() {
       updateNavbar(false);
     }
   }
+  const [showModal, setShowModal] = useState(false); // State to control modal visibility
 
+  // Function to handle button click and show the modal
+  const handleButtonClick = () => {
+    setShowModal(true);
+  };
+
+  // Function to handle modal close
+  const handleClose = () => {
+    setShowModal(false);
+  };
   window.addEventListener("scroll", scrollHandler);
 
   return (
@@ -40,6 +51,7 @@ function NavBar() {
       <Container>
         <Navbar.Brand href="/" className="d-flex">
           <img src={logo} className="img-fluid logo" alt="brand" />
+          <h2>IEEE CIS</h2>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -78,7 +90,7 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Projects
+                Events
               </Nav.Link>
             </Nav.Item>
 
@@ -88,7 +100,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Domain
               </Nav.Link>
             </Nav.Item>
 
@@ -98,20 +110,45 @@ function NavBar() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
+                <ImBlog style={{ marginBottom: "2px" }} /> Our Crew
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/soumyajit4419/Portfolio"
-                target="_blank"
+                onClick={handleButtonClick} // Attach click handler to open modal
                 className="fork-btn-inner"
               >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
                 <AiFillStar style={{ fontSize: "1.1em" }} />
               </Button>
             </Nav.Item>
+
+            {/* Bootstrap Modal */}
+            <Modal show={showModal} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Member Ship Details</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <img
+                  src="https://via.placeholder.com/150"
+                  alt="Project"
+                  style={{ width: "100%" }}
+                />
+                <p>"Join in IEEE CIS Membership to grow!</p>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+                <Button
+                  variant="primary"
+                  href="https://github.com/soumyajit4419/Portfolio"
+                  target="_blank"
+                >
+                  Join Membership
+                </Button>
+              </Modal.Footer>
+            </Modal>
           </Nav>
         </Navbar.Collapse>
       </Container>

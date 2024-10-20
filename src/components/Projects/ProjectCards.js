@@ -2,9 +2,22 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
-import { BsGithub } from "react-icons/bs";
+import { FaUserPlus } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 function ProjectCards(props) {
+  const handleButtonClick = () => {
+    Swal.fire({
+      title: "Details",
+      text: "Here are the details about the Event.",
+      imageUrl: "https://via.placeholder.com/150", // Replace with your image URL
+      imageWidth: 150,
+      imageHeight: 150,
+      imageAlt: "Custom image",
+      confirmButtonText: "Okay",
+      backdrop: true, // Optional: Enable backdrop to prevent interaction outside the popup
+    });
+  };
   return (
     <Card className="project-card-view">
       <Card.Img variant="top" src={props.imgPath} alt="card-img" />
@@ -13,10 +26,16 @@ function ProjectCards(props) {
         <Card.Text style={{ textAlign: "justify" }}>
           {props.description}
         </Card.Text>
-        <Button variant="primary" href={props.ghLink} target="_blank">
-          <BsGithub /> &nbsp;
-          {props.isBlog ? "Blog" : "GitHub"}
+        <Button
+          variant="primary"
+          href={props.ghLink}
+          target="_blank"
+          className="custom-green-button" // Add green background and border color
+        >
+          <FaUserPlus /> &nbsp;
+          {props.isBlog ? "Blog" : "Register"}
         </Button>
+
         {"\n"}
         {"\n"}
 
@@ -25,12 +44,11 @@ function ProjectCards(props) {
         {!props.isBlog && props.demoLink && (
           <Button
             variant="primary"
-            href={props.demoLink}
-            target="_blank"
-            style={{ marginLeft: "10px" }}
+            style={{ marginLeft: "10px", backgroundColor: "green" }}
+            onClick={handleButtonClick} // Attach click handler
           >
             <CgWebsite /> &nbsp;
-            {"Demo"}
+            {"Details"}
           </Button>
         )}
       </Card.Body>

@@ -1,0 +1,37 @@
+.social-icons {
+  transition: transform 0.6s ease-out; /* Longer transition for smoothness */
+}
+
+.social-icons a {
+  display: flex; /* Ensures the icon is centered */
+  justify-content: center; /* Center icon */
+}
+
+.move-up {
+  transform: translateY(-20px); /* Move up */
+}
+
+.move-down {
+  transform: translateY(20px); /* Move down */
+}
+
+.image-container,
+.text-container {
+  transition: transform 0.6s ease-out; /* Longer transition for smoothness */
+}
+
+.move-left {
+  transform: translateX(-20px); /* Move left */
+}
+
+.move-right {
+  transform: translateX(20px); /* Move right */
+  
+}
+
+@font-face {
+  font-family: 'TT Neoris';
+  src: url('./assets/TT Neoris Trial Bold Italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
