@@ -31,9 +31,15 @@ const Home = () => {
     <>
       <Particle />
       <header className="Intro" aria-label="IEEE CIS Club Introduction">
-        <h1 className="h1">
-          Empowering Innovation, Shaping Intelligent Futures
+        <h1>
+          <span class="word">
+            IEEE<span class="superscript">C S</span>{" "}
+          </span>
+          <span class="word">REC</span>
         </h1>
+        {/* <h1 className="h1">
+          Empowering Innovation, Shaping Intelligent Futures
+        </h1> */}
         <p>
           At the forefront of technological evolution, the IEEE CIS Club is a
           dynamic community of innovators, thinkers, and creators dedicated to
