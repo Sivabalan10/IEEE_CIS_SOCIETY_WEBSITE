@@ -1,6 +1,6 @@
 import React from "react";
-import myImage from "./assets/cv.jpg"; // Update with your image path
-import anotherImage from "./assets/ML.jpg"; // Update with your second image path
+import myImage from "./assets/cv.jpg";
+import anotherImage from "./assets/ML.jpg";
 
 const AboutCard = () => {
   return (
@@ -9,7 +9,8 @@ const AboutCard = () => {
         IEEE <strong className="purple">CIS</strong>
       </h1>
       <p style={descriptionStyle}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum elit sed libero luctus fringilla. Fusce eget augue id nulla blandit maximus ut semper leo.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum
+        elit sed libero luctus fringilla.
       </p>
 
       <div style={contentWrapperStyle}>
@@ -17,7 +18,7 @@ const AboutCard = () => {
         <div style={textBlockStyle}>
           <h2 style={subHeadingStyle}>Image 1 Overview</h2>
           <p style={textDescriptionStyle}>
-            This image highlights the achievements of our computational society. Dive in to learn more about our projects and initiatives.
+            This image highlights the achievements of our computational society.
           </p>
         </div>
       </div>
@@ -26,7 +27,7 @@ const AboutCard = () => {
         <div style={textBlockStyle}>
           <h2 style={subHeadingStyle}>Image 2 Overview</h2>
           <p style={textDescriptionStyle}>
-            Discover how our members are leveraging cutting-edge technologies in competitions and real-world problem-solving.
+            Discover how our members leverage cutting-edge technologies.
           </p>
         </div>
         <img src={anotherImage} alt="Another Visual" style={imageStyle} />
@@ -35,67 +36,91 @@ const AboutCard = () => {
   );
 };
 
+// Styles
 const containerStyle = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  marginTop: '80px',
-  fontFamily: 'Poppins, sans-serif',
-  padding: '0 16px', // Added padding for smaller screens
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  marginTop: "80px",
+  fontFamily: "Poppins, sans-serif",
+  padding: "16px",
 };
 
 const headingStyle = {
-  fontSize: '6.5em', // Increased font size
-  textAlign: 'center',
-  letterSpacing: '0.08em',
-  fontFamily: 'TT Neoris, sans-serif', // Apply the TT Neoris font
-  fontWeight: 'bold', // Ensure it is bold
-  fontStyle: 'italic',
+  fontSize: "4rem",
+  textAlign: "center",
+  fontFamily: "TT Neoris, sans-serif",
+  fontWeight: "bold",
+  fontStyle: "italic",
 };
 
 const descriptionStyle = {
-  marginTop: '40px',
-  fontSize: '1.125rem',
-  textAlign: 'center',
-  color: '#555',
-  maxWidth: '800px',
+  marginTop: "20px",
+  fontSize: "1.125rem",
+  textAlign: "center",
+  color: "#555",
+  maxWidth: "800px",
 };
 
 const contentWrapperStyle = {
-  display: 'flex',
-  flexDirection: 'row', // Default for larger screens
-  alignItems: 'center',
-  justifyContent: 'space-around',
-  margin: '40px 0',
-  width: '100%',
-  maxWidth: '1200px',
-  flexWrap: 'wrap', // Allow wrapping for smaller screens
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-around",
+  margin: "20px 0",
+  width: "100%",
+  maxWidth: "1200px",
+  flexWrap: "wrap",
 };
 
 const textBlockStyle = {
-  width: '45%', // Default width for larger screens
-  padding: '0 16px',
-  boxSizing: 'border-box', // Ensure padding is included in width
-};
-
-const subHeadingStyle = {
-  fontSize: '1.5rem',
-  color: '#1e40af',
-  marginBottom: '8px',
-};
-
-const textDescriptionStyle = {
-  fontSize: '1rem',
-  color: '#666',
-  lineHeight: '1.6',
+  width: "45%",
+  padding: "8px",
+  boxSizing: "border-box",
 };
 
 const imageStyle = {
-  width: '45%', // Default width for larger screens
-  margin: '8px',
-  borderRadius: '8px',
-  border: '1px solid #3b82f6',
-  boxShadow: '0px 0px 10px rgba(59, 130, 246, 0.5)',
+  width: "45%",
+  margin: "8px",
+  borderRadius: "8px",
+  border: "1px solid #3b82f6",
+  boxShadow: "0px 0px 10px rgba(59, 130, 246, 0.5)",
 };
+
+const subHeadingStyle = {
+  fontSize: "1.5rem",
+  color: "#1e40af",
+  marginBottom: "8px",
+};
+
+const textDescriptionStyle = {
+  fontSize: "1rem",
+  color: "#666",
+  lineHeight: "1.6",
+};
+
+// Inline Media Query using JS Styles
+const mediaQueryStyles = `
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+    .contentWrapperStyle {
+      flex-direction: column; /* Stack content vertically */
+    }
+    .textBlockStyle, .imageStyle {
+      width: 100%; /* Make image and text full-width */
+      text-align: center; /* Center the text for smaller screens */
+    }
+    .textBlockStyle {
+      margin-top: 16px; /* Add spacing between image and text */
+    }
+  }
+`;
+
+// Injecting Media Styles in <style> tag
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = mediaQueryStyles;
+document.head.appendChild(styleSheet);
 
 export default AboutCard;

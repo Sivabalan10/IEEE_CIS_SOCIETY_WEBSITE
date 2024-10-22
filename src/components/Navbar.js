@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
+import { FaLaptopCode, FaServer } from "react-icons/fa";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -50,8 +51,9 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
-          <h2>IEEE CIS</h2>
+          {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
+          <FaLaptopCode size={50} color="#4CAF50" />
+          <h2>IEEE CIS REC</h2>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
@@ -9,8 +9,29 @@ import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 import Accordion from "react-bootstrap/Accordion";
-
+import "./Project.css";
 function Projects() {
+  const fadeInElements = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      },
+      { threshold: 0.1 } // Adjust as needed
+    );
+
+    fadeInElements.current.forEach((el) => observer.observe(el));
+
+    return () => fadeInElements.current.forEach((el) => observer.unobserve(el));
+  }, []);
+
   return (
     <Container fluid className="project-section">
       <Particle />
@@ -33,7 +54,11 @@ function Projects() {
           Upcoming <strong className="purple">Events</strong>
         </h1>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+          <Col
+            md={4}
+            className="project-card fade-in"
+            ref={(el) => (fadeInElements.current[0] = el)}
+          >
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
@@ -44,18 +69,25 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          <Col
+            md={4}
+            className="project-card fade-in"
+            ref={(el) => (fadeInElements.current[1] = el)}
+          >
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
               title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
+              description="My personal blog page build with Next.js and Tailwind Css which takes the content from markdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
               ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
               demoLink="https://blogs.soumya-jit.tech/"
             />
           </Col>
 
-          <div className="fade-in-element q_a">
+          <div
+            className="fade-in-element q_a fade-in"
+            ref={(el) => (fadeInElements.current[2] = el)}
+          >
             <h1 className="project-heading">
               F <strong className="purple">A </strong>Q
             </h1>

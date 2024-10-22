@@ -1,37 +1,103 @@
-.social-icons {
-  transition: transform 0.6s ease-out; /* Longer transition for smoothness */
+/* Responsive container */
+.founder-container {
+  margin-top: 80px;
+  overflow: hidden;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: transparent;
+  padding: 0 16px;
 }
 
-.social-icons a {
-  display: flex; /* Ensures the icon is centered */
-  justify-content: center; /* Center icon */
+/* Heading styles */
+.founder-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin: 24px 0;
+  letter-spacing: 0.05em;
 }
 
-.move-up {
-  transform: translateY(-20px); /* Move up */
-}
-
-.move-down {
-  transform: translateY(20px); /* Move down */
-}
-
-.image-container,
-.text-container {
-  transition: transform 0.6s ease-out; /* Longer transition for smoothness */
-}
-
-.move-left {
-  transform: translateX(-20px); /* Move left */
-}
-
-.move-right {
-  transform: translateX(20px); /* Move right */
-  
-}
-
-@font-face {
-  font-family: 'TT Neoris';
-  src: url('./assets/TT Neoris Trial Bold Italic.ttf') format('truetype');
+.head {
+  font-family: 'TT Neoris', sans-serif;
   font-weight: bold;
   font-style: italic;
 }
+
+.gradient-text {
+  background-image: linear-gradient(to right, #3b82f6, #1e40af);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'TT Neoris', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Content wrapper to manage layout */
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Image and text containers */
+.image-container,
+.text-container {
+  width: 45%;
+  max-width: 600px;
+  padding: 8px;
+  transition: transform 0.6s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-container,
+  .text-container {
+    width: 100%; /* Full width for small screens */
+    text-align: center; /* Center-align text */
+  }
+
+  .founder-heading {
+    font-size: 2.5rem; /* Adjust heading size */
+  }
+
+  .founder-name {
+    font-size: 2rem;
+  }
+
+  .founder-description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .founder-heading {
+    font-size: 2rem;
+  }
+
+  .founder-name {
+    font-size: 1.5rem;
+  }
+
+  .founder-description {
+    font-size: 1rem;
+  }
+}
+
+/* Image styles */
+.code-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Smooth transition for movement */
+.move-left {
+  transform: translateX(-20px);
+}
+
+.move-right {
+  transform: translateX(20px);
+}
+  

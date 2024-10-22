@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // Import useState for handling hover effects
+import React, { useState } from "react"; 
 
 const Techstack = () => {
   return (
@@ -15,25 +15,17 @@ const Techstack = () => {
 
 // DeveloperCard Component
 const DeveloperCard = ({ data }) => {
-  const [isHovered, setIsHovered] = useState(false); // State for hover effect
+  const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const handleClick = () => {
-    alert(`You clicked on ${data.name}`); // Placeholder action on card click
-  };
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+  const handleClick = () => alert(`You clicked on ${data.name}`);
 
   return (
     <div
       style={{
         ...testimonialWrapperStyle,
-        cursor: "pointer", // Change cursor to pointer to indicate it's clickable
+        cursor: "pointer",
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -43,7 +35,9 @@ const DeveloperCard = ({ data }) => {
         style={{
           ...testimonialCardStyle,
           transform: isHovered ? "scale(1.05)" : "scale(1)",
-          boxShadow: isHovered ? "0 8px 24px rgba(0, 0, 0, 0.2)" : "0 4px 16px rgba(0, 0, 0, 0.1)",
+          boxShadow: isHovered
+            ? "0 8px 24px rgba(0, 0, 0, 0.2)"
+            : "0 4px 16px rgba(0, 0, 0, 0.1)",
         }}
       >
         <p style={cardTextStyle}>
@@ -54,8 +48,8 @@ const DeveloperCard = ({ data }) => {
             src={data.img}
             alt={`Developer ${data.name}`}
             style={{
-              ...imageStyle,
-              transform: isHovered ? "scale(1.1)" : "scale(1)", // Image hover effect
+              ...imageCardStyle,
+              transform: isHovered ? "scale(1.1)" : "scale(1)",
             }}
           />
           <div>
@@ -87,8 +81,8 @@ const headingStyle = {
   margin: '40px 0',
   color: 'white',
   letterSpacing: '0.07em',
-  fontFamily: 'TT Neoris, sans-serif', // Apply the TT Neoris font
-  fontWeight: 'bold', // Ensure it is bold
+  fontFamily: 'TT Neoris, sans-serif',
+  fontWeight: 'bold',
   fontStyle: 'italic',
 };
 
@@ -102,6 +96,7 @@ const testimonialWrapperStyle = {
   width: '100%',
   maxWidth: '33%',
   padding: '16px',
+  boxSizing: 'border-box',
 };
 
 const testimonialCardStyle = {
@@ -124,14 +119,16 @@ const profileStyle = {
   display: 'flex',
   marginTop: '32px',
   alignItems: 'center',
+  flexDirection: 'row', // Default to row
 };
 
-const imageStyle = {
+const imageCardStyle = {
   width: '64px',
   height: '64px',
   borderRadius: '50%',
   marginRight: '16px',
-  border: '2px solid #333',
+  border: '1px solid #3b82f6',
+  boxShadow: '0px 0px 10px rgba(59, 130, 246, 0.5)',
   transition: 'transform 0.3s ease',
 };
 
@@ -147,5 +144,24 @@ const nameSubtitleStyle = {
   fontStyle: 'italic',
   color: '#777',
 };
+
+// Inline Media Query Styles
+const mediaQueryStyles = `
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+    ${testimonialWrapperStyle.maxWidth = '100%'};
+    ${profileStyle.flexDirection = 'column'}; // Stack image and text vertically
+    ${imageCardStyle.marginRight = '0'}; // Remove margin when stacked
+    ${imageCardStyle.marginBottom = '12px'}; // Add spacing between image and text
+  }
+`;
+
+// Inject media query styles into <style> tag
+const styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = mediaQueryStyles;
+document.head.appendChild(styleSheet);
 
 export default Techstack;
