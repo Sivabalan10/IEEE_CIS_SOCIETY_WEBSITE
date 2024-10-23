@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -128,7 +128,6 @@ body {
     z-index: 2;
     padding: 0.25rem;
     cursor: pointer;
-    background-color : black;    
 }
 
 .card-ic .social-link1-ic,
@@ -255,7 +254,7 @@ body {
     transition: opacity 0.5s ease-in-out;
     animation: fadeIn 4s forwards;
     background-color : black;
-    round-radius: 2px
+    border-radius: 2px;
 }
 
 @keyframes fadeIn {

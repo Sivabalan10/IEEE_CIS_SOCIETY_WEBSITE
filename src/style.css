@@ -60,7 +60,7 @@ button:focus {
 }
 
 /* --------- */
-/*Scrollbar   */
+/* Scrollbar   */
 /* --------- */
 
 ::-webkit-scrollbar {
@@ -784,4 +784,14 @@ button:focus {
 .custom-grey-button{
   background-color: rgb(62, 62, 62) !important; 
   border: grey !important;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
 }

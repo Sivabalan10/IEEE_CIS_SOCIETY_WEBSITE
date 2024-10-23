@@ -32,7 +32,7 @@ const Home = () => {
       <Particle />
       <header className="Intro" aria-label="IEEE CIS Club Introduction">
         <br></br>
-
+        <br></br>
         <h1>
           <span class="word">
             IEEE<span class="superscript">C S</span>{" "}

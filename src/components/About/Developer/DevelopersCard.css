@@ -115,7 +115,7 @@ body {
     padding: 8px;
     
 }
-//illa
+
 .card-dc svg {
     position: absolute;
     display: flex;
@@ -222,7 +222,6 @@ body {
     transition: opacity 0.5s ease-in-out;
     animation: fadeIn 4s forwards;
     background-color : black;
-    round-radius: 2px
 }
 
 @keyframes fadeIn {
