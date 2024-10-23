@@ -16,13 +16,13 @@ html {
 
 
 body{
- 
  width: 100vw;
  overflow-x: hidden;
  
 }
 
 .Intro{
+  font-family: "Lora", serif !important;
 margin: 190px 250px;
 color: #bfcad4;
 text-align: center;
@@ -73,7 +73,6 @@ text-align: center;
       1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
       -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
   }
-  
 }
 .h1{
   font-family: "Geist Sans", sans-serif;
@@ -664,22 +663,20 @@ body {
    place-items: center;
  }
  
- h1 {
+ header h1 {
    color: white;
    font-family: "Playfair Display", Vidaloka, serif;
    font-size: 8em;
- 
    line-height: 0.85;
    perspective: 500px;
  }
  
  .word {
    display: block;
- 
+    font-size: 2em;
    animation: show 0.01s forwards, pop-word 1.5s forwards;
    animation-timing-function: cubic-bezier(0.14, 1.23, 0.33, 1.16);
    opacity: 0;
- 
    transform: rotateX(120deg);
    transform-origin: 50% 100%;
  }
@@ -689,7 +686,7 @@ body {
  
    animation-delay: 1.5s;
  
-   color: gold;
+   color: #DA70D6;
  }
  
  .superscript {
@@ -793,5 +790,9 @@ body {
    }
  }
  
-
- 
+.quotes{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color:black !important ;
+  background-color: #ccc;
+}

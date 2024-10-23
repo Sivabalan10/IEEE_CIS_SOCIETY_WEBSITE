@@ -31,6 +31,8 @@ const Home = () => {
     <>
       <Particle />
       <header className="Intro" aria-label="IEEE CIS Club Introduction">
+        <br></br>
+
         <h1>
           <span class="word">
             IEEE<span class="superscript">C S</span>{" "}
@@ -40,11 +42,12 @@ const Home = () => {
         {/* <h1 className="h1">
           Empowering Innovation, Shaping Intelligent Futures
         </h1> */}
-        <p>
-          At the forefront of technological evolution, the IEEE CIS Club is a
+        <br></br>
+        {/* <p className="fade-in" ref={(el) => (fadeInElements.current[0] = el)}>
+          "At the forefront of technological evolution, the IEEE CIS Club is a
           dynamic community of innovators, thinkers, and creators dedicated to
-          advancing the field of computational intelligence.
-        </p>
+          advancing the field of computational intelligence.""
+        </p> */}
         <div></div>
       </header>
 

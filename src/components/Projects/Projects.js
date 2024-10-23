@@ -5,7 +5,7 @@ import Particle from "../Particle";
 import leaf from "../../Assets/Projects/leaf.png";
 import emotion from "../../Assets/Projects/emotion.png";
 import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
+import event1 from "./Assets/event1.jpeg";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 import Accordion from "react-bootstrap/Accordion";
@@ -60,33 +60,20 @@ function Projects() {
             ref={(el) => (fadeInElements.current[0] = el)}
           >
             <ProjectCard
-              imgPath={chatify}
+              imgPath={event1}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
+              title="Envision"
+              description="Join IEEE CIS REC's EnVision Chapter 0: CV Workshop on Oct 23, 2024 (3-5 PM) for a hands-on computer vision project!
+                  Learn Roboflow, YOLO, dataset management, pre-processing, and augmentation.
+                  Register now (limited spots) and receive an e-certificate."
               ghLink="https://github.com/soumyajit4419/Chatify"
               demoLink="https://chatify-49.web.app/"
             />
           </Col>
 
-          <Col
-            md={4}
-            className="project-card fade-in"
-            ref={(el) => (fadeInElements.current[1] = el)}
-          >
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from markdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
-            />
-          </Col>
-
           <div
             className="fade-in-element q_a fade-in"
-            ref={(el) => (fadeInElements.current[2] = el)}
+            ref={(el) => (fadeInElements.current[1] = el)}
           >
             <h1 className="project-heading">
               F <strong className="purple">A </strong>Q

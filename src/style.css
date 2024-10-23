@@ -10,8 +10,8 @@ html {
     rgba(17, 16, 16, 0.678),
     rgba(12, 10, 22, 0.863)
   );
-
-  --imp-text-color: #0055ff;
+  
+  --imp-text-color: #DA70D6;
 }
 
 .purple {
@@ -69,18 +69,18 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d1950;
+  background: #DA70D6;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0044cc;
+  background: #DA70D6;
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #0044cc;
+  background: #DA70D6;
   border-radius: 12px;
 }
 
@@ -99,6 +99,7 @@ button:focus {
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
+  font-family: "Nunito", sans-serif !important;
 }
 
 .navbar-toggler {
@@ -109,7 +110,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #0044cc !important;
+  background-color: #DA70D6 !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -167,8 +168,8 @@ button:focus {
 }
 
 .logo {
-  height: 1.4em !important;
-  width: 2.5em !important;
+  height: 1.6em !important;
+  width: 5.4em !important;
 }
 
 .navbar-nav .nav-link {
@@ -179,6 +180,7 @@ button:focus {
 
 .nav-link {
   padding: 0.8rem 1rem !important;
+  font-family: "Nunito", sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -206,7 +208,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #0044cc;
+  background: #DA70D6;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -264,6 +266,7 @@ button:focus {
 
 .home-header {
   padding-top: 80px !important;
+  font-family: "Lora", serif;
 }
 
 .home-section {
@@ -280,20 +283,24 @@ button:focus {
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
+  font-family: "Nunito", sans-serif !important;
 }
 
 .heading {
   font-size: 2.4em !important;
   padding-left: 50px !important;
+  font-family: "Lora", serif !important;
 }
 
 .heading-name {
   font-size: 2.5em !important;
   padding-left: 45px !important;
+  font-family: "Lora", serif !important;
 }
 
 .main-name {
-  color: #0044cc;
+  color: #DA70D6;
+  font-family: "Lora", serif !important;
 }
 
 .Typewriter__wrapper {
@@ -303,7 +310,7 @@ button:focus {
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #0044cc !important;
+  color: #DA70D6 !important;
 }
 
 @media (max-width: 767px) {
@@ -383,7 +390,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #0044cc;
+  background: #DA70D6;
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -391,13 +398,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #0044cc;
+  box-shadow: 0 0 15px #DA70D6;
 }
 
 .home-social-icons:hover {
-  color: #0044cc;
-  box-shadow: 0 0 5px #0044cc;
-  text-shadow: 0 0 2px #0044cc;
+  color: #DA70D6;
+  box-shadow: 0 0 5px #DA70D6;
+  text-shadow: 0 0 2px #DA70D6;
 }
 
 .social-icons {
@@ -407,7 +414,7 @@ button:focus {
 }
 
 .icon-colour {
-  color: #0044cc !important;
+  color: #DA70D6 !important;
 }
 
 /* --------- */
@@ -418,6 +425,7 @@ button:focus {
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
+  font-family: "Nunito", sans-serif !important;
 }
 .footer-copywright {
   text-align: center !important;
@@ -451,7 +459,7 @@ button:focus {
 }
 
 .blockquote-footer {
-  color: #0044cc!important;
+  color: #DA70D6!important;
 }
 /* --------- */
 /* Projects */
@@ -461,6 +469,7 @@ button:focus {
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
+  font-family: "Nunito", sans-serif !important;
 }
 
 .project-card {
@@ -469,10 +478,11 @@ button:focus {
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
+  font-family: "Nunito", sans-serif !important;
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px #0044cc !important;
+  box-shadow: 0 4px 5px 3px #DA70D6 !important;
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
@@ -482,7 +492,7 @@ button:focus {
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px #0044cc !important;
+  box-shadow: 0 4px 4px 5px #DA70D6 !important;
 }
 
 .blog-card {
@@ -491,11 +501,12 @@ button:focus {
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
+  font-family: "Nunito", sans-serif !important;
 }
 
 .blog-card-view {
   background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px #0044cc !important;
+  box-shadow: 0 3px 3px 2px #DA70D6 !important;
   color: white !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
@@ -513,7 +524,7 @@ button:focus {
 .blog-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px #0044cc !important;
+  box-shadow: 0 3px 3px 5px #DA70D6 !important;
 }
 
 .card-img-top {
@@ -530,15 +541,16 @@ button:focus {
 
 .btn-primary {
   color: #fff !important;
-  background-color: #0044cc !important;
-  border-color: #0044cc !important;
+  background-color: #DA70D6 !important;
+  border-color: #DA70D6 !important;
+  font-family: "Nunito", sans-serif !important;
 }
 
 
 .btn-primary:hover {
   color: #fff !important;
-  background-color: #0055ff !important;
-  border-color: #0055ff !important;
+  background-color: #DA70D6 !important;
+  border-color: #DA70D6 !important;
 }
 .btn:focus {
   outline: none !important;
@@ -659,14 +671,14 @@ button:focus {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid #0044cc;
+  border-left: 2px solid #DA70D6;
   position: relative;
 }
 
 .resume .resume-item .resume-title {
   line-height: 18px;
   font-size: 0.9em;
-  background: #0044cc;
+  background: #DA70D6;
   padding: 8px 15px;
   display: inline-block;
   font-weight: 600;
@@ -696,7 +708,7 @@ button:focus {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #0044cc;
+  border: 2px solid #DA70D6;
 }
 
 .like-item {
@@ -706,8 +718,8 @@ button:focus {
 }
 
 .like-btn {
-  background-color: #0044cc !important;
-  border-color: #0044cc !important;
+  background-color: #DA70D6 !important;
+  border-color: #DA70D6 !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
@@ -716,8 +728,8 @@ button:focus {
 
 .like-btn:hover {
   transform: translateY(-2px) !important;
-  background-color: #0044cc !important;
-  border-color: #0044cc !important;
+  background-color: #DA70D6 !important;
+  border-color: #DA70D6 !important;
 }
 
 .animate-like {
@@ -769,3 +781,7 @@ button:focus {
   color: white !important;                       /* Change text color to white for better visibility */
 }
 
+.custom-grey-button{
+  background-color: rgb(62, 62, 62) !important; 
+  border: grey !important;
+}

@@ -3,10 +3,10 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Modal } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.jpg";
+import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
+import { MdGroup } from "react-icons/md";
 import { ImBlog } from "react-icons/im";
 import { FaLaptopCode, FaServer } from "react-icons/fa";
 import {
@@ -51,9 +51,14 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          {/* <img src={logo} className="img-fluid logo" alt="brand" /> */}
-          <FaLaptopCode size={50} color="#4CAF50" />
-          <h2>IEEE CIS REC</h2>
+          <img
+            src={logo}
+            style={{ width: "200px", height: "100px" }}
+            className="img-fluid logo"
+            alt="brand"
+          />
+          {/* <FaLaptopCode size={50} color="#4CAF50" />
+          <h2>IEEE CIS REC</h2> */}
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -102,17 +107,7 @@ function NavBar() {
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Domain
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Our Crew
+                <MdGroup style={{ marginBottom: "2px" }} /> Our Crew
               </Nav.Link>
             </Nav.Item>
 

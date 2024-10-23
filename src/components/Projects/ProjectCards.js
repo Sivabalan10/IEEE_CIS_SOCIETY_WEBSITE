@@ -10,7 +10,8 @@ function ProjectCards(props) {
     Swal.fire({
       title: "Details",
       text: "Here are the details about the Event.",
-      imageUrl: "https://via.placeholder.com/150", // Replace with your image URL
+      imageUrl:
+        "https://drive.google.com/file/d/1IhCq4M-96-CzyopDgxlN63cz3vOmWwp8/view?usp=drivesdk", // Replace with your image URL
       imageWidth: 150,
       imageHeight: 150,
       imageAlt: "Custom image",
@@ -28,12 +29,12 @@ function ProjectCards(props) {
         </Card.Text>
         <Button
           variant="primary"
-          href={props.ghLink}
-          target="_blank"
-          className="custom-green-button" // Add green background and border color
+          // href={props.ghLink}
+          // target="_blank"
+          className="custom-grey-button" // Add green background and border color
         >
-          <FaUserPlus /> &nbsp;
-          {props.isBlog ? "Blog" : "Register"}
+          {/* <FaUserPlus /> &nbsp; */}
+          {props.isBlog ? "Blog" : "Closed"}
         </Button>
 
         {"\n"}
